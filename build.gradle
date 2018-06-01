@@ -1,26 +1,19 @@
 plugins {
     id 'java' // Needed for assemble and build
-    //id 'maven'
-    id 'com.enonic.defaults' version '1.0.3'
-    id 'com.enonic.xp.base' version '1.0.15' // Found here https://github.com/enonic/lib-admin-ui/blob/master/build.gradle
-    //id 'com.enonic.xp.run' version '1.0.11' // Just for apps?
+    id 'maven' // Provides install task
     id "com.moowork.node" version "1.2.0"
 }
 
 
 repositories {
-    //mavenLocal()
     jcenter()
-    xp.enonicRepo() // requires com.enonic.defaults
+    maven {
+        url 'http://repo.enonic.com/public'
+    }
 }
 
 
 dependencies {
-    //compile "com.enonic.xp:core-api:${xpVersion}" // Just for apps?
-    //compile "com.enonic.xp:portal-api:${xpVersion}" // Just for apps?
-    //compile "com.enonic.xp:lib-content:${xpVersion}"
-    //compile "com.enonic.xp:lib-portal:${xpVersion}"
-    //compile 'com.cronutils:cron-utils:5.0.4' // Same as app-cronjob
     compile 'com.cronutils:cron-utils:6.0.3'
 }
 
