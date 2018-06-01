@@ -44,6 +44,7 @@ const WEBPACK_CONFIG = {
         /\/lib\/(enonic|xp)/
     ],
     devtool: false, // Don't waste time generating sourceMaps
+    mode: 'production',
     module: {
         rules: [{
             test: /\.(es6?|js)$/, // Will need js for node module depenencies
